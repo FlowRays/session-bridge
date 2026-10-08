@@ -1,0 +1,15 @@
+[Unit]
+Description=Session Bridge MCP and OAuth tunnel
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+Environment=PATH=%h/.local/bin:/usr/local/bin:/usr/bin:/bin
+WorkingDirectory=%h/.local/share/session-bridge
+ExecStart=%h/.local/share/session-bridge/.venv/bin/python %h/.local/share/session-bridge/run.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

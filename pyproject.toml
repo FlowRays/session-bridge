@@ -1,0 +1,12 @@
+[project]
+name = "session-bridge"
+version = "0.1.0"
+description = "Manage persistent coding-agent and shell sessions through MCP and tmux."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = ["tmux-agents==0.4.0", "mcp==1.30.0"]
+
+[project.urls]
+Repository = "https://github.com/FlowRays/session-bridge"
+Issues = "https://github.com/FlowRays/session-bridge/issues"
